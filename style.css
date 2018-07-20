@@ -441,6 +441,45 @@ body {
     border-radius: 3px;
 }
 
+#buttonMenuWrapper { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttonMenuButton {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    margin-bottom: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button-menu {
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-menu-column {
+    margin-bottom: 60px;
+    transition: 0.1s;
+    display: grid;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2em 3em;
+    border-radius: 20px;
+}
+
+.button-hide {
+    margin-bottom: -500px;
+}
+
 /* COG */
 
 .rotate {
@@ -542,5 +581,75 @@ body {
     }
     100% {
         transform: translate(19px, 0);
+    }
+}
+
+@media (max-width: 1200px) {
+    .youtube,
+    .gmail,
+    .github,
+    .reddit,
+    .linkedin {
+        padding: 0.35em 1.25em;
+    }
+    .youtube {
+        margin-right: 2px;
+    }
+    .gmail {
+        margin-right: 2px;
+    }
+    .github {
+        margin-right: 2px;
+    }
+    .reddit {
+        margin-right: 2px;
+    }
+    .linkedin {
+        margin-left: 2px;
+    }
+}
+
+@media (max-width: 975px) {
+    .button-wrapper {
+        display: none;
+    }
+    #delete {
+        display: none;
+        background: #fff;
+        color: #333;
+        font-weight: 600;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        padding: 3px 10px;
+        border-radius: 3px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 0 15px 15px 0;
+        z-index: 0;
+    }
+    
+    #delete:hover {
+        transition: 0.1s;
+        padding: 5px 12px;
+    }
+
+    #buttonMenuButton {
+        visibility: visible;
+    }
+
+    .button-menu {
+        visibility: visible;
+    }
+
+    .button-menu-column
+    .youtube,
+    .gmail,
+    .github,
+    .reddit,
+    .linkedin {
+        margin: 5px 0 5px 0;
     }
 }

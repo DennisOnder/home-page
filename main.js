@@ -6,6 +6,11 @@ document.getElementById('closeMenu').addEventListener('click', hideMenuRotate);
 document.getElementById('menuButton').addEventListener('click', changeName);
 document.getElementById('searchInput').addEventListener('keyup', search);
 document.getElementById('menuButton1').addEventListener('click', removeTodoRotate);
+document.getElementById('buttonMenuButton').addEventListener('click', showButtonMenu);
+
+function showButtonMenu() {
+    document.getElementById('buttonMenuColumn').classList.toggle('button-hide');
+}
 
 function search(e) {
     if (e.keyCode === 13 || e.which === 13) {
@@ -35,14 +40,14 @@ function hideMenu() {
 function hideMenuRotate() {
     document.getElementById('menuId').style.marginLeft = '-500px'
     document.getElementById('cog-wrapper').classList += 'rotateBack';
-    setTimeout(function() {
+    setTimeout(function () {
         document.getElementById('cog-wrapper').classList.remove('rotateBack');
     }, 250)
 }
 
 function turnCog() {
     document.getElementById('cog-wrapper').classList += 'rotate';
-    setTimeout(function() {
+    setTimeout(function () {
         document.getElementById('cog-wrapper').classList.remove('rotate');
     }, 250)
 }
@@ -121,10 +126,12 @@ function hideLoader() {
         var cog = document.getElementById('cog');
         var buttons = document.getElementById('buttons');
         var deleteButton = document.getElementById('delete');
+        var menuButton = document.getElementById('buttonMenuButton');
         loader.style.display = 'none';
         cog.style.visibility = 'visible';
         buttons.style.visibility = 'visible';
         deleteButton.style.visibility = 'visible';
+        menuButton.style.display = 'block';
     }, 550)
 }
 
