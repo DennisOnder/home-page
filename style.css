@@ -288,6 +288,7 @@ body {
     text-align: center;
     font-weight: bold;
     border-radius: 20px;
+    margin-right: 10px;
 }
 
 .youtube i {
@@ -303,7 +304,7 @@ body {
     text-align: center;
     font-weight: bold;
     border-radius: 20px;
-    margin: 0 10px;
+    margin-right: 10px;
 }
 
 .gmail i {
@@ -320,6 +321,7 @@ body {
     text-align: center;
     font-weight: bold;
     border-radius: 20px;
+    margin-right: 10px;
 }
 
 .github i {
@@ -335,10 +337,25 @@ body {
     text-align: center;
     font-weight: bold;
     border-radius: 20px;
-    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .reddit i {
+    margin-right: 5px;
+}
+
+.linkedin {
+    color: #fff;
+    background: #0077B5;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding: 0.75em 2em;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.linkedin i {
     margin-right: 5px;
 }
 
