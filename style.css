@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: #fff;
+    overflow: hidden;
+}
+
+#wrapper {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://source.unsplash.com/1920x1080');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-blend-mode: darken;
+}
+
+#time {
+    text-align: center;
+    font-size: 40px;
+}
+
+.todo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#todoInput {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: transparent;
+    outline: 0;
+    border: none;
+    box-shadow: none;
+    color: #fff;
+    font-size: 16px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0.75em;
+}
+
+#todoOutput {
+    text-align: center;
+    display: none;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #fff;
+}
+
+#todoInput::placeholder {
+    text-align: center;
+    color: #fff !important;
+    opacity: 1;
+}
+
+#todoInput:-ms-input-placeholder {
+    text-align: center;
+    color: #fff !important;
+}
+
+#todoInput::-ms-input-placeholder {
+    text-align: center;
+    color: #fff !important;
+}
+
+#todoInput:focus::-moz-placeholder {
+    text-align: center;
+    transition: 0.1s !important;
+    color: transparent !important;
+}
+
+#todoInput:focus:-moz-placeholder {
+    text-align: center;
+    transition: 0.1s !important;
+    color: transparent !important;
+}
+
+#todoInput:focus::-webkit-input-placeholder {
+    text-align: center;
+    transition: 0.1s !important;
+    color: transparent !important;
+}
+
+#todoInput:focus::-ms-input-placeholder {
+    text-align: center;
+    transition: 0.1s !important;
+    color: transparent#fff !important;
+}
+
+#nameInput {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: transparent;
+    outline: 0;
+    border: none;
+    box-shadow: none;
+    color: #fff;
+    font-size: 16px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0.75em;
+    display: none;
+}
+
+#nameInput::placeholder {
+    text-align: center;
+    color: #fff !important;
+    opacity: 1;
+}
+
+#nameInput:-ms-input-placeholder {
+    text-align: center;
+    color: #fff !important;
+}
+
+#nameInput::-ms-input-placeholder {
+    text-align: center;
+    color: #fff !important;
+}
+
+#nameInput:focus::-moz-placeholder {
+    text-align: center;
+    transition: 0.1s !important;
+    color: transparent !important;
+}
+
+#nameInput:focus:-moz-placeholder {
+    text-align: center;
+    transition: 0.1s !important;
+    color: transparent !important;
+}
+
+#nameInput:focus::-webkit-input-placeholder {
+    text-align: center;
+    transition: 0.1s !important;
+    color: transparent !important;
+}
+
+#nameInput:focus::-ms-input-placeholder {
+    text-align: center;
+    transition: 0.1s !important;
+    color: transparent#fff !important;
+}
+
+#searchInput {
+    margin-top: 150px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: transparent;
+    outline: 0;
+    border: none;
+    box-shadow: none;
+    color: #fff;
+    font-size: 16px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0.75em;
+}
+
+#searchInput::placeholder {
+    text-align: center;
+    color: #fff !important;
+    opacity: 1;
+}
+
+#searchInput:-ms-input-placeholder {
+    text-align: center;
+    color: #fff !important;
+}
+
+#searchInput::-ms-input-placeholder {
+    text-align: center;
+    color: #fff !important;
+}
+
+#searchInput:focus::-moz-placeholder {
+    text-align: center;
+    transition: 0.1s !important;
+    color: transparent !important;
+}
+
+#searchInput:focus:-moz-placeholder {
+    text-align: center;
+    transition: 0.1s !important;
+    color: transparent !important;
+}
+
+#searchInput:focus::-webkit-input-placeholder {
+    text-align: center;
+    transition: 0.1s !important;
+    color: transparent !important;
+}
+
+#searchInput:focus::-ms-input-placeholder {
+    text-align: center;
+    transition: 0.1s !important;
+    color: transparent#fff !important;
+} 
+
+.delete-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#delete {
+    display: none;
+    background: #fff;
+    color: #333;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    padding: 5px 20px;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 15px 15px 0;
+    z-index: 0;
+}
+
+#delete:hover {
+    transition: 0.1s;
+    padding: 7px 30px;
+}
+
+.cog-wheel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.cog-wheel i {
+    z-index: 0;
+    cursor: pointer;
+}
+
+#cog:hover {
+    transition: 0.1s;
+    font-size: 2.5rem;
+}
+
+#cog {
+    visibility: hidden;
+}
+
+#buttons {
+    visibility: hidden;
+}
+
+#delete{
+    visibility: hidden;
+}
+
+/* BUTTONS */
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-row {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 25px;
+}
+
+.youtube {
+    background: #ff0000;
+    color: #fff;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding: 0.75em 2em;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.youtube i {
+    margin-right: 5px;
+}
+
+.gmail {
+    color: #ff0000;
+    background: #fff;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding: 0.75em 2em;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 20px;
+    margin: 0 10px;
+}
+
+.gmail i {
+    color: #ff0000;
+    margin-right: 5px;
+}
+
+.github {
+    color: #333;
+    background: rgb(130, 219, 13);
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding: 0.75em 2em;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.github i {
+    margin-right: 5px;
+}
+
+.reddit {
+    color: #fff;
+    background: #FF4500;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding: 0.75em 2em;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
+.reddit i {
+    margin-right: 5px;
+}
+
+.menu {
+    transition: 0.3s;
+    width: 400px;
+    height: 150px;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 60px;
+    margin-left: -500px;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#closeMenu {
+    transition: 0.1s;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    margin: auto;
+    cursor: pointer;
+}
+
+#closeMenu:hover {
+    transition: 0.2s;
+    font-weight: bold;
+    background: #fff;
+    color: #333;
+    padding: 0.5em 1em;
+    border-radius: 3px;
+}
+
+#menuButton {
+    cursor: pointer;
+    transition: 0.1s;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    margin: auto;
+}
+
+#menuButton:hover {
+    transition: 0.2s;
+    font-weight: bold;
+    background: #fff;
+    color: #333;
+    padding: 0.5em 1em;
+    border-radius: 3px;
+}
+#menuButton1 {
+    cursor: pointer;
+    transition: 0.1s;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    margin: auto;
+}
+
+#menuButton1:hover {
+    transition: 0.2s;
+    font-weight: bold;
+    background: #fff;
+    color: #333;
+    padding: 0.5em 1em;
+    border-radius: 3px;
+}
+
+/* COG */
+
+.rotate {
+    animation: turnCog 1s;
+}
+
+.rotateBack {
+    animation: turnCogBack 1s
+}
+
+@keyframes turnCog {
+    0% {
+        transform: rotate(0deg) scale(1) translateX(0) translateY(0) skewX(0) skewY(0);
+    }
+    100% {
+        transform: rotate(360deg) scale(1) translateX(0) translateY(0) skewX(0) skewY(0);
+    }
+}
+
+@keyframes turnCogBack {
+    0% {
+        transform: rotate(360deg) scale(1) translateX(0) translateY(0) skewX(0) skewY(0);
+    }
+    100% {
+        transform: rotate(0deg) scale(1) translateX(0) translateY(0) skewX(0) skewY(0);
+    }
+}
+
+/* LOADER */
+
+#spinner {
+    height: 100vh;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+}
+
+.lds-ellipsis div {
+    position: absolute;
+    top: 27px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+    left: 6px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+    left: 6px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+    left: 26px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+    left: 45px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(19px, 0);
+    }
+}

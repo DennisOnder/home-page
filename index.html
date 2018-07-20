@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>New Tab</title>
+</head>
+
+<body id="body" onload="hideLoader(), startTime(), checkTodo(), checkName()">
+
+    <div id="spinner">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="wrapper">
+        <div id="header">
+            <div class="container">
+                <div id="name">
+                    <input type="text" id="nameInput" placeholder="What Is Your Name?">
+                    <h1 id="nameOutput">Hello, Dennis!</h1>
+                </div>
+                <div id="time">
+                    <h3 id="timeOutput">
+                    </h3>
+                </div>
+                <div class="todo">
+                    <p id="todoOutput"></p>
+                    <input type="text" id="todoInput" placeholder="What Is Your Goal Today?">
+                </div>
+                <input type="text" id="searchInput" placeholder="Google Search:">
+                <div class="delete-button">
+                    <button id="delete">Delete Your Todo</button>
+                </div>
+                <div class="cog-wheel">
+                    <div id="cog-wrapper">
+                        <i class="fas fa-cog fa-2x" id="cog"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu" id="menuId">
+            <button id="closeMenu">&lt;</button>
+            <button id="menuButton">Change Your Name</button>
+            <button id="menuButton1">Delete Your Todo</button>
+        </div>
+        <div class="button-wrapper" id="buttons">
+            <div class="button-row">
+                <a href="https://www.youtube.com/" target="_blank" class="youtube">
+                    <i class="fab fa-youtube"></i>YouTube</a>
+                <a href="https://www.gmail.com/" target="_blank" class="gmail">
+                    <i class="fas fa-envelope"></i>Gmail</a>
+                <a href="https://www.github.com/" target="_blank" class="github">
+                    <i class="fab fa-github"></i>GitHub</a>
+                <a href="https://www.reddit.com/" target="_blank" class="reddit">
+                    <i class="fab fa-reddit"></i>Reddit</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
