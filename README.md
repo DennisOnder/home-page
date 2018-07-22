@@ -1,4 +1,9 @@
 # home-page
+
+```
+https://dennisonder.github.io/home-page/
+```
+
 ## Replacement for the boring New Tab and Home pages.
 > This application has been made for private use, but you are more than welcome to use it yourself if you'd like.
 
@@ -17,3 +22,7 @@ So if you encounter that some of the elements overlap, that is why.
 EDIT 21/7/2018:
 Added responsiveness for use with mobile devices.
 ```
+
+## Usage:
+
+>To use this application, you can use the provided link, and set it as your home page new tab page.
