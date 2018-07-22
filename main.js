@@ -2,11 +2,20 @@ document.getElementById('todoInput').addEventListener('keyup', addTodo);
 document.getElementById('nameInput').addEventListener('keyup', addName);
 document.getElementById('cog').addEventListener('click', turnCog);
 document.getElementById('cog').addEventListener('click', showMenu);
-document.getElementById('closeMenu').addEventListener('click', showMenu);
-document.getElementById('menuButton').addEventListener('click', changeName);
 document.getElementById('searchInput').addEventListener('keyup', search);
 document.getElementById('buttonMenuButton').addEventListener('click', showButtonMenu);
-document.getElementById('menuButton1').addEventListener('click', removeTodo);
+document.getElementById('menuButton').addEventListener('click', function() {
+    changeName();
+    turnCog();
+});
+document.getElementById('menuButton1').addEventListener('click', function() {
+    removeTodo();
+    turnCog();
+});
+document.getElementById('closeMenu').addEventListener('click', function() {
+    showMenu();
+    turnCog();
+});
 
 function showButtonMenu() {
     document.getElementById('buttonMenuColumn').classList.toggle('button-hide');
