@@ -2,11 +2,11 @@ document.getElementById('todoInput').addEventListener('keyup', addTodo);
 document.getElementById('nameInput').addEventListener('keyup', addName);
 document.getElementById('cog').addEventListener('click', turnCog);
 document.getElementById('cog').addEventListener('click', showMenu);
-document.getElementById('closeMenu').addEventListener('click', hideMenuRotate);
+document.getElementById('closeMenu').addEventListener('click', showMenu);
 document.getElementById('menuButton').addEventListener('click', changeName);
 document.getElementById('searchInput').addEventListener('keyup', search);
-document.getElementById('menuButton1').addEventListener('click', removeTodoRotate);
 document.getElementById('buttonMenuButton').addEventListener('click', showButtonMenu);
+document.getElementById('menuButton1').addEventListener('click', removeTodo);
 
 function showButtonMenu() {
     document.getElementById('buttonMenuColumn').classList.toggle('button-hide');
@@ -16,7 +16,7 @@ function search(e) {
     if (e.keyCode === 13 || e.which === 13) {
         var value = document.getElementById('searchInput').value;
         window.open('https://www.google.com/search?q=' + encodeURI(value));
-        hideMenu();
+        document.getElementById('searchInput').value = null;
     } else {
         return '';
     }
@@ -26,23 +26,11 @@ function changeName() {
     localStorage.removeItem('name');
     document.getElementById('nameOutput').style.display = 'none';
     document.getElementById('nameInput').style.display = 'block';
-    hideMenu();
+    showMenu();
 }
 
 function showMenu() {
-    document.getElementById('menuId').style.marginLeft = '15px';
-}
-
-function hideMenu() {
-    document.getElementById('menuId').style.marginLeft = '-500px'
-}
-
-function hideMenuRotate() {
-    document.getElementById('menuId').style.marginLeft = '-500px'
-    document.getElementById('cog-wrapper').classList += 'rotateBack';
-    setTimeout(function () {
-        document.getElementById('cog-wrapper').classList.remove('rotateBack');
-    }, 250)
+    document.getElementById('menuId').classList.toggle('show-menu');
 }
 
 function turnCog() {
@@ -95,7 +83,7 @@ function checkTodo() {
         document.getElementById('todoOutput').innerHTML = todo;
         document.getElementById('todoOutput').style.display = 'block';
         document.getElementById('delete').style.display = 'block';
-        document.getElementById('delete').addEventListener('click', removeTodo)
+        document.getElementById('delete').addEventListener('click', removeTodoNoCog)
     } else {
         document.getElementById('todoInput').style.display = 'block';
         document.getElementById('todoOutput').style.display = 'none';
@@ -108,25 +96,26 @@ function removeTodo() {
     document.getElementById('todoInput').style.display = 'block';
     document.getElementById('delete').style.display = 'none';
     document.getElementById('todoInput').value = '';
-    hideMenu();
+    showMenu();
 }
 
-function removeTodoRotate() {
+function removeTodoNoCog() {
     localStorage.removeItem('todo');
     document.getElementById('todoOutput').style.display = 'none';
     document.getElementById('todoInput').style.display = 'block';
     document.getElementById('delete').style.display = 'none';
     document.getElementById('todoInput').value = '';
-    hideMenuRotate();
 }
 
 function hideLoader() {
     setTimeout(function () {
+        var wrapper = document.getElementById('wrapper');
         var loader = document.getElementById('spinner');
         var cog = document.getElementById('cog');
         var buttons = document.getElementById('buttons');
         var deleteButton = document.getElementById('delete');
         var menuButton = document.getElementById('buttonMenuButton');
+        wrapper.style.display = 'block';
         loader.style.display = 'none';
         cog.style.visibility = 'visible';
         buttons.style.visibility = 'visible';

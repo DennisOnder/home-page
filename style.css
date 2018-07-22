@@ -10,6 +10,7 @@ body {
 }
 
 #wrapper {
+    display: none;
     width: 100%;
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://source.unsplash.com/1920x1080');
@@ -109,6 +110,10 @@ body {
     border-bottom: 1px solid #fff;
     padding-bottom: 0.75em;
     display: none;
+}
+
+#nameOutput {
+    text-align: center;
 }
 
 #nameInput::placeholder {
@@ -361,7 +366,7 @@ body {
 
 .menu {
     transition: 0.3s;
-    width: 400px;
+    width: 200px;
     height: 150px;
     background: rgba(0, 0, 0, 0.7);
     position: absolute;
@@ -374,6 +379,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.show-menu {
+    margin-left: 15px;
 }
 
 #closeMenu {
@@ -614,7 +623,6 @@ body {
         display: none;
     }
     #delete {
-        display: none;
         background: #fff;
         color: #333;
         font-weight: 600;
@@ -651,5 +659,15 @@ body {
     .reddit,
     .linkedin {
         margin: 5px 0 5px 0;
+        font-weight: 300;
+    }
+    #searchInput {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 450px) {
+    .delete-button {
+        display: none;
     }
 }
