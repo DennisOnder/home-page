@@ -25,4 +25,4 @@ Added responsiveness for use with mobile devices.
 
 ## Usage:
 
->To use this application, you can use the provided link, and set it as your home page new tab page.
+>To use this application, you can use the provided link, and set it as your home page and new tab page.
