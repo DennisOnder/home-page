@@ -457,8 +457,6 @@ body {
 }
 
 #buttonMenuButton {
-    display: none;
-    visibility: hidden;
     position: absolute;
     bottom: 0;
     color: #fff;
@@ -468,7 +466,6 @@ body {
 }
 
 .button-menu {
-    visibility: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -484,6 +481,16 @@ body {
     padding: 2em 3em;
     border-radius: 20px;
 }
+
+.button-menu-column
+    .youtube,
+    .gmail,
+    .github,
+    .reddit,
+    .linkedin {
+        margin: 5px 0 5px 0;
+        font-weight: 300;
+    }
 
 .button-hide {
     margin-bottom: -500px;
@@ -643,24 +650,6 @@ body {
         transition: 0.1s;
         padding: 5px 12px;
     }
-
-    #buttonMenuButton {
-        visibility: visible;
-    }
-
-    .button-menu {
-        visibility: visible;
-    }
-
-    .button-menu-column
-    .youtube,
-    .gmail,
-    .github,
-    .reddit,
-    .linkedin {
-        margin: 5px 0 5px 0;
-        font-weight: 300;
-    }
     #searchInput {
         margin-bottom: 50px;
     }
@@ -674,6 +663,7 @@ body {
         display: none;
     }
     #header {
+        padding-top: 3em;
         height: 80vh;
     }
 }
