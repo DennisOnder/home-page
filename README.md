@@ -1,8 +1,6 @@
 # home-page
 
-```
-(https://dennisonder.github.io/home-page/)[https://dennisonder.github.io/home-page/]
-```
+[https://dennisonder.github.io/home-page/](https://dennisonder.github.io/home-page/)
 
 ## Replacement for the boring New Tab and Home pages.
 > This application has been made for private use, but you are more than welcome to use it yourself if you'd like.
